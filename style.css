@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+:root {
+  --main-font: "Lato", "sans-serif";
+  --main-font-color: #f8f8ff;
+}
+
+/* ::-webkit-input-placeholder {
+  text-align: center;
+} */
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  font-family: var(--main-font);
+  position: absolute;
+}
+
+
+main section.upSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+  color: var(--main-font-color);
+  position: relative;
+}
+
+main section.searchSec .input {
+  width: 200px;
+}
+
+main section.upSection .wrapper {
+  width: 100%;
+  display: flex;
+  gap: 25rem;
+  padding-left: 20%;
+}
+
+main section.upSection .wrapper .temperature {
+  width: 350px;
+  height: 200px;
+}
+main section.upSection .wrapper .temperature .showTemp,
+main section.upSection .wrapper .nameContainer .locationName {
+  text-align: center;
+  font-size: 5.5em;
+}
+main section.upSection .wrapper .temperature .showTime {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+main section.upSection .wrapper .nameContainer {
+  text-align: end;
+}
+
+main section.bottomSection {
+  width: 100%;
+  height: 50%;
+  /* background-color: gray; */
+  position: relative;
+  background: rgba(42, 62, 71, 0.688);
+}
+main section.bottomSection {
+  display: none;
+  justify-self: end;
+  color: var(--main-font-color);
+}
+main section.bottomSection .infoContainer {
+  width: 100%;
+  height: 100%;
+}
+main section.bottomSection .infoContainer .sWrapper {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 100px;
+}
+main section.bottomSection .infoContainer .sWrapper .humidity,
+main section.bottomSection .infoContainer .sWrapper .feels_like,
+main section.bottomSection .infoContainer .sWrapper .windSpeed,
+.countryCode {
+  width: 350px;
+  height: 200px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 25px;
+  gap: 30px;
+}
+
+.imageResize {
+  width: 100px;
+  height: 100px;
+}
+main section.searchSec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  position: relative;
+  padding-top: 30px;
+  gap: 15px;
+}
+main section.searchSec input {
+  width: 300px;
+  height: 50px;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+main section.upSection .wrapper .temperature .detailedInfo {
+  text-align: center;
+  font-size: 2em;
+}
+main section.upSection .wrapper .nameContainer .countryCode {
+  font-size: 2em;
+  text-align: end;
+}
+main section.upSection .wrapper .nameContainer .locationName {
+  text-align: end;
+}
+
+.videoContainer {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+main section.searchSec .clickSearch {
+  font-size: 30px;
+  color: var(--main-font-color);
+  cursor: pointer;
+}
