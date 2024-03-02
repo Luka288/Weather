@@ -12,6 +12,7 @@ const upSection = document.querySelector(".upSection");
 const videoContainer = document.querySelector(".videoContainer");
 const sWrapper = document.querySelector(".sWrapper");
 const clickSearch = document.querySelector(".clickSearch");
+const title = document.querySelector("title");
 
 const key = "bd5771cb0500a754c0140458e34e346d";
 const apiLink = "https://api.openweathermap.org/data/2.5/weather?units=metric";
@@ -99,6 +100,7 @@ function assemblyHTML(data) {
   countryCodeDis.innerHTML += `<span>${data.sys.country}</span>`;
   humidity.innerHTML += `<span>${data.main.humidity}</span>`;
   feels_like.innerHTML += `<img
+  
   src="./assets/images/feelslikeLogo.png"
   alt=""
   class="imageResize"
@@ -112,6 +114,7 @@ function assemblyHTML(data) {
   class="icon"
   />
   <span>Humidity : ${data.main.humidity}</span>`;
+
   countryCode.innerHTML = `<img
     src="./assets/images/countryLogo.webp"
     alt=""
@@ -119,6 +122,7 @@ function assemblyHTML(data) {
     class="icon"
   />
   <span>Country : ${data.sys.country}</span>`;
+
   windSpeed.innerHTML = `<img
   src="./assets/images/windspeedLogo.png"
   alt=""
@@ -126,6 +130,9 @@ function assemblyHTML(data) {
   class="icon"
   />
   <span>windSpeed : ${data.wind.speed}</span>`;
+
+  title.innerHTML += ` (${data.name})`;
+
   if (data.sys.country === undefined) {
     countryCodeDis.innerHTML = `<span></span>`;
     countryCode.innerHTML = `<img
@@ -173,6 +180,7 @@ function clearHTML() {
   muted=""
   class="resizeVideo"
 ></video>`;
+  title.innerHTML = `Weather`;
   document.querySelector(".bottomSection").style.display = "none";
 }
 
