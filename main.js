@@ -84,7 +84,7 @@ async function getWeather(city) {
     console.log(data);
   } catch (error) {
     if ((error = "404")) {
-      alert("Error", "error", "enter city or country");
+      alert("Error", "error", "ENTER CITY OR COUNTRY");
       clearHTML();
     } else {
       console.log(error);
@@ -148,7 +148,7 @@ function assemblyHTML(data) {
 searchBar.addEventListener("search", () => {
   getWeather(search.value);
   if (search.value === ``) {
-    alert("Error", "error", "enter city or country");
+    alert("Error", "error", "ENTER CITY OR COUNTRY");
   }
   clearHTML();
 });
@@ -158,7 +158,7 @@ clickSearch.addEventListener("click", () => {
   getWeather(clickSearch.value);
   clearHTML();
   if (clickSearch.value === ``) {
-    alert("Error", "error", "enter city or country");
+    alert("Error", "error", "ENTER CITY OR COUNTRY");
   }
 });
 
